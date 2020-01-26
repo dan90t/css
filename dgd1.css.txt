@@ -1,16 +1,6 @@
+
 /* 배경 */
 
-
-
-body {
-
-    height: auto !important;
-
-    background: #ffcecc;    /* 배경색 코드 입력 */
-
-        /* ex) background: #ffffff; */
-
-}
 
 html {
 
@@ -26,19 +16,17 @@ body {
 
 background: transparent;
 
+/*배경 눈내림 효과 */
 animation: snow 20s linear infinite;
-
 
 
 /*백그라운드 이미지 원근감느낌 이미지*/
 
-background-image:url('https://cdn.discordapp.com/attachments/460145928850898945/515694458633846831/snow.png'), url("https://cdn.discordapp.com/attachments/460145928850898945/515694460668084274/snow3.png"), url("https://cdn.discordapp.com/attachments/460145928850898945/515694462278828073/snow2.png");
+background-image: url('https://cdn.discordapp.com/attachments/460145928850898945/515694458633846831/snow.png'), 
+url("https://cdn.discordapp.com/attachments/460145928850898945/515694460668084274/snow3.png"),
+url("https://cdn.discordapp.com/attachments/460145928850898945/515694462278828073/snow2.png");
 
 }
-
-
-
-
 
 /*뒷배경 움직이는 애니메이션*/
 
@@ -49,7 +37,6 @@ background-image:url('https://cdn.discordapp.com/attachments/460145928850898945/
 100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
 
 }  
-/*출처 : https://tgd.kr/18728438?category=18684731 */
 
 
 /* 로고 */
@@ -311,7 +298,7 @@ header #header-bar>.row, #main .menu-wrapper, #main #main-content>div.frame {
 
 #article-list>.article-list-row.notice {
 
-    background-color: #ffccff; /* 공지 배경 색 */
+    background-color: #ffb3ff; /* 공지 배경 색 */
 
 }
 
@@ -445,6 +432,32 @@ header #header-bar>.row, #main .menu-wrapper, #main #main-content>div.frame {
 
     transform: scale(1.01);
     
-    color:#ffb3ff; 
+    background:#ffccff; 
 
 } 
+
+/* 하트 펌핑 애니메이션 */
+ 
+ small.favo i.fa.fa-heart {
+ 
+     animation: heartbeat 1s infinite;
+
+}
+
+
+
+ @keyframes heartbeat {
+
+    0% {transform: scale(1);}
+ 30% {transform: scale(1.25);} 
+ 42% {transform: scale(0.9);}
+ 60% {transform: scale(1.15);}
+ 85% {transform: scale(0.95);}
+ 100% {transform: scale(1);}
+ 
+}
+
+
+
+
+/*적용확인 head 2번째  */
