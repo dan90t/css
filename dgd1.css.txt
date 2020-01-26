@@ -448,5 +448,3 @@ header #header-bar>.row, #main .menu-wrapper, #main #main-content>div.frame {
     color:#ffb3ff; 
 
 } 
-
-/*적용확인 head 2번째  ff2b4e */
