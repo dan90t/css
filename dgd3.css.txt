@@ -1,7 +1,4 @@
 
-/* 배경 */
-
-
 html {
 
    background: linear-gradient(to bottom, #8c83af, #FFFFFF);
@@ -16,17 +13,22 @@ body {
 
 background: transparent;
 
-/*배경 눈내림 효과 */
 animation: snow 20s linear infinite;
+
 
 
 /*백그라운드 이미지 원근감느낌 이미지*/
 
-background-image: url('https://cdn.discordapp.com/attachments/460145928850898945/515694458633846831/snow.png'), 
-url("https://cdn.discordapp.com/attachments/460145928850898945/515694460668084274/snow3.png"),
-url("https://cdn.discordapp.com/attachments/460145928850898945/515694462278828073/snow2.png");
+background-image:
+url('https://cdn.discordapp.com/attachments/460145928850898945/515694458633846831/snow.png'), 
+url('https://cdn.discordapp.com/attachments/460145928850898945/515694460668084274/snow3.png'), 
+url('https://cdn.discordapp.com/attachments/460145928850898945/515694462278828073/snow2.png');
 
 }
+
+
+
+
 
 /*뒷배경 움직이는 애니메이션*/
 
@@ -36,12 +38,12 @@ url("https://cdn.discordapp.com/attachments/460145928850898945/51569446227882807
 
 100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
 
-}  
+}
+
+
 
 
 /* 로고 */
-
-
 
 header .row>div:nth-child(1)>a {
 
@@ -51,12 +53,19 @@ header .row>div:nth-child(1)>a {
 
     height: 50px;
 
-    background: url(https://ifh.cc/g/b9CTU.png) no-repeat; /* url(로고 경로 입력) */
+    background: url(https://ifh.cc/g/lgDja.png) no-repeat; 
 
     background-size: auto 50px;
 
 }
 
+
+
+header .row>div:nth-child(1)>a>img {
+
+  display: none;
+
+}
 
 /* 프로필 이미지 */
 #board-info #board-info-profile-img {
@@ -110,6 +119,17 @@ header #right-search-form>#right-search-btn {
 
 }
 
+/* 드롭다운 */
+
+#article-list>.article-list-row:hover {
+
+    transform: scale(1.01);
+    
+    background: #ffccff; 
+
+}
+
+
 
 
 /* 배너 */
@@ -159,14 +179,6 @@ header #header-bar #header-top-notice strong.notice-badge {
     border: 1px solid #; /* 좌측 배너 테두리 색 */
 
     border-top: none !important;
-
-}
-
-/*메뉴바 공백 */
-
-#main .menu-wrapper .spacer {
-
-    display: none;
 
 }
 
@@ -223,32 +235,6 @@ header #header-bar #header-top-notice strong.notice-badge {
 }
 
 
-/* 테두리 */
-
-
-
-header #header-bar>.row, #main .menu-wrapper, #main #main-content>div.frame {
-
-    border-radius: 15px;
-
-}
-
-
-
-#main .menu-wrapper>.header {
-
-    border-radius: 15px 15px 0 0;
-
-}
-
-
-
-#main .menu-wrapper a:nth-last-child(1) {
-
-    border-radius: 0px 0px 15px 15px;
-
-}
-
 
 /* 접속자 수 */
 
@@ -256,7 +242,7 @@ header #header-bar>.row, #main .menu-wrapper, #main #main-content>div.frame {
 
 #board-info #viewers-area {
 
-    color: #; /* 접속자 수 글씨 색 */
+    color: #e6005c; /* 접속자 수 글씨 색 */
 
 }
 
@@ -265,6 +251,10 @@ header #header-bar>.row, #main .menu-wrapper, #main #main-content>div.frame {
 #board-info #viewers-area #viewers:before {
 
     content: "도화바라기 ";    /* 숫자 앞에 들어갈 문구 */
+
+        /* ex) content: "트수 "; */
+
+        /* 출력 시 : 트수 n */
 
     cursor: text;
 
@@ -276,19 +266,13 @@ header #header-bar>.row, #main .menu-wrapper, #main #main-content>div.frame {
 
     content: "송이";    /* 숫자 뒤에 들어갈 문구 */
 
+        /* ex) content: "명 접속중"; */
+
+        /* 출력시 : n명 접속중 */
+
     cursor: text;
 
 }
-
-/*접속인원 아이콘
-
-#board-info #viewers-area .fa-user:before {
-
- color: rgba(10, 59, 84, 0);
-
- content: url(이미지 주소);
-
-}*/
 
 
 
@@ -426,38 +410,51 @@ header #header-bar>.row, #main .menu-wrapper, #main #main-content>div.frame {
 
 }
 
-/* 드롭다운*/
 
-#article-list>.article-list-row:hover {
-
-    transform: scale(1.01);
-    
-    background:#ffccff; 
-
-} 
-
-/* 하트 펌핑 애니메이션 */
- 
- small.favo i.fa.fa-heart {
- 
-     animation: heartbeat 1s infinite;
-
+/* 애니메이션 */
+.fa-user:before {
+	content: "\f004";	
 }
 
-
-
- @keyframes heartbeat {
-
-    0% {transform: scale(1);}
- 30% {transform: scale(1.25);} 
- 42% {transform: scale(0.9);}
- 60% {transform: scale(1.15);}
- 85% {transform: scale(0.95);}
- 100% {transform: scale(1);}
- 
+.fa-user {
+	animation: heartbeat 1s infinite;
+	color: #f5cfcf;
 }
 
+small.favo i.fa.fa-heart {
+	animation: heartbeat 1s infinite;
+}
 
+span.a-badge i.fa.fa-star {
+	animation: shiningstar 2s infinite;
+	animation-timing-function: linear;
+}
 
+/* 스크롤 */
+#movetotop img {
+	display:none;
+}
 
-/*적용확인 head 2번째  */
+#movetotop {
+	opacity:1;
+	background: var(--toTopURL);
+	width: var(--toTopWidth);
+	height: var(--toTopHeight);
+	border-radius: 0;
+	background-size: contain;
+}
+
+/*************** animation **************/
+@keyframes heartbeat {
+	0% { transform: scale(1); }
+	30% { transform: scale(1.25); }
+	42% { transform: scale(0.9); }
+	60% { transform: scale(1.15); }
+	85% { transform: scale(0.95); }
+	100% { transform: scale(1); }
+}
+
+@keyframes shiningstar {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}  
